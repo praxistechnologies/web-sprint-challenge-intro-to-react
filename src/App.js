@@ -13,7 +13,7 @@ const App = () => {
   return (
     <div className="App">
       <h1 className="Header">STAR WARS</h1>
-      <h3 className="Header3">- The Website -</h3>
+      <h2 className="Header2">- The Website -</h2>
       <Character />
     </div>
   );

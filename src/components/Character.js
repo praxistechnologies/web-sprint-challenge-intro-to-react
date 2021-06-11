@@ -42,6 +42,8 @@ const DropDownLi = styled(StyledLi)`
     padding:  10px;    
     border: 1px solid #d2d2d2;
     box-shadow: 0px 1px 6px -2px #807f7f;
+    display: flex;
+    justify-content: space-between;
 `
 
 const SubA = styled.div`
@@ -59,17 +61,23 @@ const Character = () => {
     const [ show, setShow ] = useState('')
     useEffect(() => {   
         axios
-        .get('https://swapi.dev/api/people')
-        .then(res => setCharacters(res.data.message))
+        .get('https://swapi.dev/api/people').then((res) => {     
+            console.log("res", res)                   
+            setCharacters(res.data)
+        })
         .catch(err => console.log(err));
     }, []);
     const handleClick = (name) => {
-        setShow(name)
+        if(name !== show) {
+            setShow(name)
+        } else {
+            setShow('')
+        }
     }
     return  (
         <>
             <StyledUl>
-            {characters.map((character, index) => {
+            {characters&&characters.map((character, index) => {
                 return (
                     <DropDownLi key={index}>
                         {character.name} &nbsp;
