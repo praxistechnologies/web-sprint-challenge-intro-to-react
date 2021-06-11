@@ -81,6 +81,15 @@ After finishing your required elements, you can push your work further. These go
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. What is React JS and what problems does it solve? Support your answer with concepts introduced in class and from your personal research on the web.
+React is a User Interface Component library that accomplishes one thing, manage updates on the DOM.
+
+
 1. Describe component state.
+Components in React are made with JSX which is a combination of JavaScript and HTML on the same page with the HTML returning the JavaScript object. Component State refers to the result of one slice of state with two possible values; i.e. "on" or "off". useState is a hook that when implemented allows variables in function components with an example being changing a light bulb image color to yellow which shows that it is on and white image to show that its off. 
+
+
 1. Describe props.
+Props are arguments passed into React components and used to pass information held on  state inside one component to another component. Props are read only, and made in a parent - child relationship, meaning that when using them, it is best practice to never make changes to the data so we know where changes are made to the application. 
+
+
 1. What are side effects, and how do you sync effects in a React component to changes of certain state or props?
