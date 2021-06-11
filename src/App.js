@@ -1,4 +1,5 @@
 import React from 'react';
+import Character from './components/Character';
 import './App.css';
 
 const App = () => {
@@ -11,7 +12,9 @@ const App = () => {
 
   return (
     <div className="App">
-      <h1 className="Header">Characters</h1>
+      <h1 className="Header">STAR WARS</h1>
+      <h3 className="Header3">- The Website -</h3>
+      <Character />
     </div>
   );
 }
